@@ -1,0 +1,53 @@
+{
+  "name": "timeline",
+  "description": "React Pro Timeline demo",
+  "version": "4.3.0",
+  "author": {
+    "name": "Bryntum",
+    "url": "https://bryntum.com",
+    "email": "info@bryntum.com"
+  },
+  "license": "commercial",
+  "homepage": "./",
+  "engines": {
+    "node": "20.17.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts start",
+    "postinstall": "postinstall"
+  },
+  "postinstall": {
+    "node_modules/@bryntum/schedulerpro/*.css": "copy public/themes/",
+    "node_modules/@bryntum/schedulerpro/fonts/*": "copy public/themes/fonts/"
+  },
+  "dependencies": {
+    "@bryntum/schedulerpro": "6.0.5",
+    "@bryntum/schedulerpro-react": "6.0.5",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "react-scripts": "5.0.1",
+    "web-vitals": "~4.2.3"
+  },
+  "devDependencies": {
+    "cross-env": "~7.0.3",
+    "postinstall": "~0.10.3",
+    "sass": "~1.78.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  }
+}
